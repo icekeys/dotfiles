@@ -1,0 +1,390 @@
+/*         ▀▀█ █▀▀ █   █ █
+           ▄▀  █▀▀ █   █▀▄
+           ▀▀▀ ▀▀▀ ▀▀▀ ▀ ▀           */
+/*--------------IMPORTS------------- */
+@import url(https://schnensch0.github.io/zelk/main.css);
+@import url(https://mwittrien.github.io/BetterDiscordAddons/Themes/_res/SettingsIcons.css);
+@import url(https://crearts-community.github.io/Settings-Icons/clients/powercord.css);
+/*-------------VARIABLES-------------*/
+:root {
+  /* set to 'unset' to show */
+  --scrollbars: unset;
+  /* user notes */
+  --notes: none;
+  /* direct message box */
+  --message: none;
+  /* set to '4px solid' to show */
+  --embed-color: 4px solid;
+  /* set to 'Inter', sans-serif !important to use Inter font*/
+  --font-primary: Whitney, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-display: Whitney, "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  --border-radius-1: 10px;
+  --border-radius-2: 8px;
+  --disable-animations: 2s channel-unread infinite;
+  --mention-color: var(--button-destructive);
+}
+/*-----------CUSTOM COLORS-----------*/
+/*-------------DARK MODE-------------*/
+/*---------------BASIC---------------*/
+.theme-dark {
+  --accent-color: #87A1FF;
+  --background-1: #1A1B26;
+  --background-2: #16161E;
+  --background-accent: #1E202E;
+  --border-color: #87a1ff1c;
+}
+/*-------------LIGHT MODE------------*/
+.theme-light {
+  --accent-color: #22c5fd;
+  --background-1: #ffffff;
+  --background-2: #f5f7fa;
+  --background-accent: var(--background-2);
+  --border-color: transparent;
+}
+/*-------------ADVANCED--------------*/
+.theme-dark {
+  /* background */
+  --background-primary: var(--background-1);
+  --background-primary-alt: var(--background-1);
+  --background-secondary: var(--background-1);
+  --background-secondary-alt: var(--background-1);
+  --background-tertiary: var(--background-2);
+  --background-accent-gradient: var(--background-2);
+  --background-floating: var(--background-1);
+  --background-mentioned: #9abdf50e;
+  --background-mentioned-hover: rgba(154, 189, 245, 0.132);
+  /* modifiers */
+  --background-modifier-hover: #6183bb32;
+  --background-modifier-active: #495a6344;
+  --background-modifier-selected: var(--accent-color);
+  --background-modifier-accent: transparent;
+  --background-message-hover: #1E202E;
+  /* text */
+  --text-normal: #c4ccf1;
+  --text-positive: var(--accent-color);
+  --text-muted: #6d8692;
+  --text-link: #edf6fecc;
+  --interactive-selected: var(--background-primary);
+  --interactive-active: var(--text-normal);
+  --interactive-normal: var(--text-normal);
+  --interactive-muted: var(--button-background-active);
+  --channels-default: var(--text-muted);
+  --header-primary: var(--text-normal);
+  --header-secondary: var(--text-muted);
+  /* more */
+  --settings-icon-color: #8eacbc;
+  --control-brand-foreground: var(--accent-color);
+  --info-warning-foreground: var(--accent-color);
+  --tab-selected: #6183bb22;
+  --switch: #6183bb22;
+  --activity-card-background: var(--background-1);
+  --brand-experiment: var(--accent-color) !important;
+  /* buttons */
+  --button-background: #6183bb22;
+  --button-background-hover: #6183bb32;
+  --button-background-active: #2a2b3c;
+  --button-accent: var(--accent-color);
+  --button-accent-hover: #d2f3ff;
+  --button-accent-active: #8dd4f8;
+  --button-destructive: #fb7c7c;
+  --button-destructive-hover: #ff929b;
+  --button-destructive-active: #fa4a4a;
+}
+.theme-light {
+  /* background */
+  --background-primary: var(--background-1);
+  --background-primary-alt: var(--background-1);
+  --background-secondary: var(--background-1);
+  --background-secondary-alt: var(--background-1);
+  --background-tertiary: var(--background-2);
+  --background-accent-gradient: var(--background-2);
+  --background-floating: var(--background-1);
+  --background-mentioned: #22c5fd10;
+  --background-mentioned-hover: #22c5fd15;
+  /* modifiers */
+  --background-modifier-hover: transparent;
+  --background-modifier-active: #b7c2cc;
+  --background-modifier-selected: var(--accent-color);
+  --background-modifier-accent: transparent;
+  --background-message-hover: transparent;
+  /* text */
+  --text-normal: #123354;
+  --text-positive: var(--text-normal);
+  --text-muted: #8495a7;
+  --text-link: #15a6f0;
+  --interactive-selected: var(--background-primary);
+  --interactive-active: var(--text-normal);
+  --interactive-normal: var(--text-normal);
+  --interactive-muted: var(--text-muted);
+  --channels-default: var(--text-normal);
+  --header-primary: var(--text-normal);
+  --header-secondary: var(--text-muted);
+  /* more */
+  --settings-icon-color: #566e86;
+  --control-brand-foreground: var(--accent-color);
+  --info-warning-foreground: var(--accent-color);
+  --tab-selected: var(--background-1);
+  --switch: #c8d0d9;
+  --activity-card-background: var(--background-1);
+  --brand-experiment: var(--accent-color) !important;
+  /* buttons */
+  --button-background: var(--background-1);
+  --button-background-hover: #d3dae1;
+  --button-background-active: #b1bcc8;
+  --button-accent: var(--accent-color);
+  --button-accent-hover: #22c5fd;
+  --button-accent-active: #0d87c5;
+  --button-destructive: #fb7c7c;
+  --button-destructive-hover: #ff929b;
+  --button-destructive-active: #fa4a4a;
+}
+
+/* user panel ui @o77tsen */
+.panels-3wFtMD {
+  height: 0;
+}
+
+.withTagAsButton-OsgQ9L, .withTagless-10ooWt {
+    min-width: 210px !important;
+    max-width: 60px;
+    position: fixed;
+    margin-left: 4px;
+    border-radius: 8px;
+    height: 40px;
+    background-color: var(--background-2);
+    border: 2px solid var(--button-background-active);
+    padding-bottom: 40px;
+    transition: all 0.2s ease-in-out;
+}
+
+.withTagAsButton-OsgQ9L:hover {
+  padding-bottom: 80px;
+  background-color: var(--background-1) !important;
+  border-radius: 8px !important;
+}
+
+.container-YkUktl button {
+    top: 4px;
+    width: 48px;
+    background: var(--bg-overlay-4,var(--background-primary));
+    margin: 8px;
+    border-radius: 5px;
+}
+
+.grid-21dB-S {
+  background-color: var(--background-2);
+}
+
+/* settings list ui @o77tsen */
+:root .panels-3wFtMD > .container-YkUktl > .flex-2S1XBF {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 150px;
+  z-index: 1;
+  transform: translate(-2px, 2px);
+  width: 64px;
+  border-radius: 0 20px 0 0;;
+  border: 2px solid var(--button-background-active);
+  flex-direction: column;
+  background: var(--background-1);
+}
+
+/* server list ui @o77tsen */
+.wrapper-1_HaEi.guilds-2JjMmN {
+    height: 402px;
+    width: 70px;
+    right: 6px;
+    top: 14px;
+    background: var(--background-1);
+    transform: translate(-2px);
+    z-index: 0;
+    border-radius: 0 20px 20px 0;
+    border: 2px solid var(--button-background-active);
+}
+
+.wrapper-38slSD:not(:has(ul)) {
+    display: flex;
+    justify-content: center;
+}
+
+.tabBody-2dgbAs, .chat-2ZfjoI, .container-1NXEtd, .container-1oAagU, .privateChannels-oVe7HL, .homeWrapperNormal-bu1BS6 {
+  background-color: var(--background-tertiary);
+}
+.peopleColumn-1wMU14, .chatContent-3KubbW:not(.container-3XgAHv *), .pageWrapper-2PwDoS, .scroller-29cQFV, .stageSection-3mAD8V {
+  border-radius: var(--border-radius-1);
+  margin-left: 10px;
+  background-color: var(--background-primary) !important;
+}
+.scroller-WSmht3 {
+  border-radius: var(--border-radius-1) var(--border-radius-1) 0 0;
+}
+.scroller-1ox3I2 {
+  background-color: var(--background-secondary);
+}
+.chatContent-3KubbW, .sidebar-1tnWFu, .tabBody-2dgbAs, .pageWrapper-2PwDoS, .stageSection-3mAD8V, .applicationStore-2nk7Lo {
+  margin-bottom: 10px;
+}
+.scroller-35tvpe {
+  margin-bottom: 24px;
+}
+.pageWrapper-2PwDoS, .content-1jQy2l, .applicationStore-2nk7Lo {
+  margin-right: 10px;
+}
+.channel-1Shao0 {
+  margin-right: 2px;
+}
+
+/* channels */
+.wrapper-NhbLHG {
+  margin-right: 4px;
+}
+
+/* forums */
+.list-3FIpnh {
+  background-color: var(--background-2) !important;
+}
+
+/* recent members list */
+.content-1jQy2l {
+  background-color: var(--background-2) !important;
+}
+
+/* browse channels */
+.pageBody-23bo4p {
+  background-color: var(--background-2) !important;
+}
+
+/* events modal */
+.content-1OG56Q {
+  background-color: var(--background-1) !important;
+}
+
+/* servers */
+.newMessagesBar-1hF-9G, .active-WHsd77 {
+  background-color: var(--accent-color) !important;
+}
+.newMessagesBar-1hF-9G, .newMessagesBar-1hF-9G:active {
+  top: -5px;
+  left: 8px;
+  right: 8px;
+  border-radius: var(--border-radius-2);
+}
+
+/* misc */
+.theme-dark .container-ZMc96U, .themed-Hp1KC_ {
+  background-color: var(--background-2) !important;
+}
+
+.contentColumn-1C7as6 input {
+  background-color: var(--background-1);
+}
+
+.bioTextArea-dDGOeC {
+  background-color: var(--background-1) !important;
+}
+
+.lookFilled-GPyucw {
+  background-color: var(--background-1) !important;
+}
+
+.metadataContainer-35U-On button {
+  background-color: var(--background-1) !important;
+}
+
+/* profiles */
+.note-1MiCN7 textarea, .note-Go5ZP2 textarea, .note-3M15gE, .userInfoSectionHeader-2mYYun:last-of-type {
+  display: block;
+}
+.avatar-3QF_VA {
+  top: -65px;
+}
+.header-S26rhB, .customStatusActivity-WKWGD- {
+  margin-left: unset;
+}
+.root-8LYsGj, .profileBanner-1owKI5, .profileBannerPremium-KD60EB, .bannerOverlayProfile-31VOgt {
+  width: unset;
+  max-width: none;
+}
+.root-8LYsGj .tabBar-2hXqzU {
+  justify-content: left;
+}
+
+.item-3mHhwr.addFriend-emTWY1 {
+  background-color: var(--button-accent) !important;
+}
+
+.buttonsContainer-3iOFIV button {
+  background-color: var(--button-accent) !important;
+}
+.actionButton-iarQTd {
+  background-color: var(--button-accent) !important;
+}
+.followButton-1N-GGp {
+  background-color: var(--button-accent) !important;
+}
+
+/**
+* @name Comfy
+* @author Nyria#3863
+* @description Stay comfy while talking to your friends
+* @invite rtBQX5D3bD
+* @version 2.4
+* @donate https://ko-fi.com/nyria
+*/
+/* dm ping ui */
+:root .unreadMentionsBar-ZXXoOH .text-2GsXbW {
+  display: none;
+}
+:root .unreadMentionsIndicatorTop-2bTgUU {
+  width: 100%;
+  height: 50px;
+  top: -7px;
+  padding: 0;
+}
+:root .unreadMentionsIndicatorTop-2bTgUU .unreadMentionsBar-ZXXoOH {
+  border-radius: 0;
+  background: linear-gradient(var(--mention-color), rgba(0, 0, 0, 0));
+  transition: 100ms;
+}
+:root .unreadMentionsIndicatorTop-2bTgUU .unreadMentionsBar-ZXXoOH:active {
+  background: linear-gradient(var(--mention-color), rgba(0, 0, 0, 0));
+}
+:root .unreadMentionsIndicatorBottom-3RJMnQ {
+  width: 100%;
+  height: 15px;
+  padding: 0;
+}
+:root .unreadMentionsIndicatorBottom-3RJMnQ .unreadMentionsBar-ZXXoOH {
+  border-radius: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0), var(--mention-color));
+}
+:root .unreadMentionsIndicatorBottom-3RJMnQ .unreadMentionsBar-ZXXoOH:active {
+  background: linear-gradient(rgba(0, 0, 0, 0), var(--mention-color));
+}
+
+:root .lowerBadge-3j0ZAg .numberBadge-37OJ3S {
+  background-color: var(--mention-color) !important;
+}
+:root .lowerBadge-3j0ZAg .numberBadge-37OJ3S::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background-color: inherit;
+  border-radius: 100%;
+  z-index: -1;
+  animation: var(--disable-animations), 2s pulse infinite;
+  will-change: transform;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.75);
+    opacity: 0;
+  }
+}
