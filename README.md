@@ -8,10 +8,6 @@ my macOS setup
 ### the bar
 <img src="https://i.imgur.com/uIzLiNk.png" alt="img" width="800">
 
-https://github.com/o77tsen/dots/assets/88957235/c9920a3b-f541-421f-adf6-8ea715b8d93f
-
-https://github.com/o77tsen/dots/assets/88957235/521ae2ea-a116-4e84-9ed8-2e7f883ee207
-
 ## config
 - [sketchybar](https://github.com/FelixKratz/SketchyBar)
 - [yabai](https://github.com/koekeishiya/yabai)
